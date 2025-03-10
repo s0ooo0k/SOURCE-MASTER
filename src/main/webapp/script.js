@@ -2,9 +2,13 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const controller = document.querySelector("#controller");
+    const spinnerContainer = document.querySelector("#spinnerContainer");
+
+
     controller.addEventListener("submit", async (event) => {
         event.preventDefault();
         controller.setAttribute("disable", true);
+        spinnerContainer.style.display = "block";
         const prompt = document.querySelector("#prompt").value;
         const model = document.querySelector("#model").value;
         // alert(`${prompt} ${model}`);
@@ -15,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
         const json = await response.json();
+        spinnerContainer.style.display = "none";
         document.querySelector("#response").textContent = json.content;
     })
 
