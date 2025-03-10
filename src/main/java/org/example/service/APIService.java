@@ -61,7 +61,7 @@ public class APIService {
                            },
                            {
                              "role": "user",
-                             "content": "하이디라오 훠궈 소스로 유명한 %s 만드는 방법을 알려줘."
+                             "content": "하이디라오 훠궈나, 마라탕에 어울리는 %s 소스 만드는 재료와 방법을 알려줘."
                            }
                          ],
                          "model": "%s"
