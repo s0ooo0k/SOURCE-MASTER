@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+
+:root {
+    --primary-color: #e63946;
+    --secondary-color: #1d3557;
+    --background-color: #f1faee;
+    --text-color: #2b2d42;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://p2.cri.cn/M00/34/03/rBABC2D-m2-AZQvyAAAAAAAAAAA741.2048x1365.700x467.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.sauce-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.sauce-card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-custom {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
